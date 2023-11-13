@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <form action="#" onSubmit="handleSubmit(event)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <script>
+            function handleSubmit(event) {
+                // Feel free to ask about this if you want to know more.
+                event.preventDefault();
+
+                // Grab the form reference from the event
+                const form = event.target
+
+                // Create a FormData object from the form
+                const formData = new FormData(event.target);
+
+                // You can access form data using formData.get() method
+                const username = formData.get('username');
+                const password = formData.get('password');
+
+                // You can now use the form data as needed, for example, you could send it to a server using fetch()
+                // For this example, we'll just log it to the console
+                console.log('Username:', username);
+                console.log('Password:', password);
+
+                // You can then reset the form if needed
+                form.reset();
+            }
+        </script>
+    </body>
+</html>
