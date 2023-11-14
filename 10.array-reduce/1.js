@@ -1,0 +1,3 @@
+const letters = ["h", "e", "l", "l", "o"]
+
+const string = ...

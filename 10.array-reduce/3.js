@@ -1,0 +1,3 @@
+const numbers = [1, -10, 5, 4, -6]
+
+const positive = ...

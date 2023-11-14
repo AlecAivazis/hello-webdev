@@ -1,0 +1,14 @@
+{
+  "name": "vite-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "ping": "echo pong",
+    "dev": "vite dev",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vite": "^4.5.0"
+  }
+}
