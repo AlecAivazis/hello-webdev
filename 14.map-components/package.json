@@ -1,0 +1,17 @@
+{
+  "name": "vite-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "ping": "echo pong",
+    "dev": "vite dev",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vite": "^4.5.0"
+  }
+}
