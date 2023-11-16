@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 export function RepoList() {
-  const { data, isLoading, error } = useQuery<{
+  let { data, isLoading, error } = useQuery<{
     repositories: { owner: string; name: string }[];
   }>({
     queryKey: ["repoList"],
@@ -14,6 +14,9 @@ export function RepoList() {
   if (isLoading) return "loading...";
   if (error) return "An error has occurred: " + error.message;
   if (!data) return "no data?";
+
+  // we need to limit the result to only 10 or else we'll hit the rate limit
+  data = { ...data, repositories: data.repositories.slice(0, 10) };
 
   // if we made it this far there was no error and we’re not loading
   return (
